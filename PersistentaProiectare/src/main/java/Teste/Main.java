@@ -4,17 +4,17 @@ import org.oop.app.Candidat;
 import org.oop.app.Candidatura;
 import org.oop.app.Departament;
 import org.oop.app.Pozitie;
-import repository.DepPozRepository;
+import repository.AplicatieRepository;
 import java.util.Date;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        DepPozRepository repository = new DepPozRepository();
+        AplicatieRepository repository = new AplicatieRepository();
 
         try {
             // Crearea unui nou candidat
-            Candidat candidat = new Candidat(null, "Ion ion", "123 Main St", "555-58855", "ion.ion@example.com", new Date());
+            Candidat candidat = new Candidat(null, "Ion Ionescu", "34324 Main St", "555-58855", "ion.ion@example.com", new Date());
             repository.saveCandidat(candidat);
 
             // Obținerea și afișarea tuturor departamentelor

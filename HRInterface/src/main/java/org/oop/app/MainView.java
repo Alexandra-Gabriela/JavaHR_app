@@ -1,6 +1,6 @@
 package org.oop.app;
 
-import FormCandidatura.FormCandidatura;
+import FormCandidatura.FormCandidaturaView;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Paragraph;
@@ -18,7 +18,8 @@ public class MainView extends Div implements RouterLayout {
     }
 
     private void openApplicationForm() {
-        FormCandidatura applicationForm = new FormCandidatura();
-        applicationForm.open();
+        FormCandidaturaView applicationForm = new FormCandidaturaView();
+        applicationForm.open(); // Deschide dialogul
     }
+
 }

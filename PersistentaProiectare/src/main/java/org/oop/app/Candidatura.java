@@ -3,6 +3,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import metamodel.AbstractEntity;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -29,10 +30,11 @@ public class Candidatura extends AbstractEntity {
 
 
     @OneToMany(mappedBy = "candidatura", cascade = CascadeType.ALL)
-    private List<Candidat> candidatList;
+    private List<Candidat> candidatList = new ArrayList<>();;
 
     @OneToMany(mappedBy = "candidatura", cascade = CascadeType.ALL)
     private List<Pozitie> pozitii;
+
 
     @ManyToOne
     @JoinColumn(name="id_interviu")
